@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初识Vue</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+    <!-- 初识Vue:
+            1.想让Vue工作，就必须创建一个Vue实例，且要传入一个配置对象;
+            2.root容器里的代码依然符html规范,只不过混入了一些特殊的Vue语法;
+            3.root容器里的代码被称为【Vue模板】;
+ -->
+    <div id ="demo">    
+        <h1>Hello {{name}} {{age}}</h1>
+    </div>
+    
+    <script>
+
+        // 创建Vue实例
+        new Vue({
+            el:'#demos' , //el用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串
+                        //id 用  '#idname' , class 用   '.classname'
+
+            data:{  //data中用于存储数据，数据供el所指定的容器去使用，值我们先暂时写成一个对象
+                name: '徐凯',
+                age: '21'
+            }
+        })
+    </script>
+</body>
+</html>
